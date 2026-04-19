@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args){
         int guess = 0;
         int answer = -1;
+        int attempts = 0;
         System.out.println("**************************");
         System.out.println("***NUMBER GUESSING GAME***");
         System.out.println("**************************");
@@ -16,6 +17,7 @@ public class Main {
         while(guess != answer){
             System.out.print("Enter you guess(1-20): ");
             guess = scanner.nextInt();
+            attempts++ ;
 
             if(guess > answer){
                 System.out.println("Too High!! Try Again!! ");
@@ -26,6 +28,7 @@ public class Main {
         }
         
         System.out.println("GOT IT!! Answer: " + answer);
+        System.out.println("Number of Attempts: " + attempts);
         
         scanner.close();
         
